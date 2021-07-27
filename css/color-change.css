@@ -1,0 +1,40 @@
+:root {
+    --dark-background-color: #111111;
+    --dark-background-color-alt: #222222;
+    --dark-trim-color: #333333;
+    --dark-text-color: #eeeeee;
+}
+
+body {
+    /* Light Theme */
+    --background-color: #ffffff;
+    --background-color-alt: #eeeeee;
+    --trim-color: #dddddd;
+    --text-color: #333333;
+    
+    --primary-color: #009578;
+    --font-family: 'Quicksand', sans-serif;
+
+    margin: 0;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    background: var(--background-color);
+	padding: 0;
+	overflow-x: hidden;
+}
+
+body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --background-color-alt: var(--dark-background-color-alt);
+    --trim-color: var(--dark-trim-color);
+    --text-color: var(--dark-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --background-color: var(--dark-background-color);
+        --background-color-alt: var(--dark-background-color-alt);
+        --trim-color: var(--dark-trim-color);
+        --text-color: var(--dark-text-color);
+    }
+}
